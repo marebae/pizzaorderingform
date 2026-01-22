@@ -1,0 +1,19 @@
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 1.4;
+	margin: 16px;
+}
+
+
+.contact-field { display: flex; flex-direction: column; margin-bottom: 10px; max-width: 360px; }
+.contact-field label { margin-bottom: 4px; font-weight: 600; }
+.contact-field input, .contact-field textarea { padding: 6px; font-size: 1rem; }
+
+
+.favorite-games-table { border-collapse: collapse; width: 100%; max-width: 800px; margin-top: 12px; }
+.favorite-games-table th, .favorite-games-table td { border: 1px solid #666; padding: 8px; text-align: left; }
+
+@media (max-width: 480px) {
+	.contact-field { max-width: 100%; }
+}
