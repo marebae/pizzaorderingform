@@ -10,18 +10,24 @@
 <body>
     <h1>Pizza Ordering Form</h1>
     <h2>Contact Information</h2>
-    <form action="/submit" method="post">
+    <form id="contact-form" action="/submit" method="post">
         <div class="contact-field">
             <label for="name">Name:</label>
-            <input id="name" type="text" name="name" required>
+             <input id="name" name="name" type="text" required minlength="2" maxlength="50"
+                   pattern="^[A-Za-z][A-Za-z '\\-\\.]{1,49}$"
+                   title="Enter a real name (letters, spaces, -, ', .)">
         </div>
         <div class="contact-field">
             <label for="phone">Phone:</label>
-            <input id="phone" type="tel" name="phone" required>
+             <input id="phone" name="phone" type="tel" required
+                   pattern="^\\+?[0-9\\s()\\-]{7,20}$"
+                   title="Digits, spaces, parentheses, + or - (7–20 chars)">
+        </div>
         </div>
         <div class="contact-field">
             <label for="email">Email:</label>
-            <input id="email" type="email" name="email" required>
+            <input id="email" name="email" type="email" required maxlength="254"
+                   title="Enter a valid email address">
         </div>
 
     <h2>Select Pizza Size</h2>
@@ -57,7 +63,7 @@
         <button type="submit">Submit</button>
     </form>
 
-    <h3>List of My Favorite Games</h3>
+    <h4>List of My Favorite Games</h4>
     <table class="favorite-games-table" border="1" cellpadding="6" cellspacing="0">
         
         <tr>
@@ -88,7 +94,22 @@
         <tr>
             <td colspan="3">Count: 4</td>
         </tr>
-        
-    </table>
+        </table>
+
+        <script>
+        (function(){
+            const form = document.getElementById('contact-form');
+            if (!form) return;
+            form.addEventListener('submit', function(e){
+                const elements = Array.from(this.querySelectorAll('input, textarea, select'));
+                const invalid = elements.find(el => typeof el.checkValidity === 'function' && !el.checkValidity());
+                if (invalid) {
+                    e.preventDefault();
+                    invalid.reportValidity();
+                    invalid.focus();
+                }
+            });
+        })();
+        </script>
 </body>
 </html>
