@@ -4,104 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizza Ordering Form </title>
+    <link rel="stylesheet" href="styles.css">
     
 </head>
 <body>
     <h1>Contact Information</h1>
     <form action="/submit" method="post">
-        <table>
-            <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Email</th>
-            </tr>
-            <tr>
-                <td><input type="text" name="first_name" required></td>
-                <td><input type="text" name="last_name" required></td>
-                <td><input type="email" name="email" required></td>
-            </tr>
-        </table>
+        <div class="contact-field">
+            <label for="name">Name</label>
+            <input id="name" type="text" name="name" required>
+        </div>
+        <div class="contact-field">
+            <label for="phone">Phone</label>
+            <input id="phone" type="tel" name="phone" required>
+        </div>
+        <div class="contact-field">
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" required>
+        </div>
         <button type="submit">Submit</button>
     </form>
-</body>
-<body>
+
     <h2>Select Pizza Size</h2>
     <form action="/submit" method="post">
-        <label>
-            <input type="radio" name="size" value="medium" required> Medium
-        </label><br>
-        <label>
-            <input type="radio" name="size" value="large"> Large
-        </label><br>
-        <label>
-            <input type="radio" name="size" value=" xlarge"> X-Large
-        </label><br>
+        <label><input type="radio" name="size" value="medium" required> Medium</label><br>
+        <label><input type="radio" name="size" value="large"> Large</label><br>
+        <label><input type="radio" name="size" value="xlarge"> X-Large</label><br>
         <button type="submit">Submit</button>
-</body>
-<body>
+    </form>
+
     <h3>Select Sauce</h3>
     <form action="/submit" method="post">
-        <label>
-            <input type="radio" name="sauce" value="marinara"> Marinara
-        </label><br>
-        <label>
-            <input type="radio" name="sauce" value="Ranch"> Ranch
-        </label><br>
-        <label>
-            <input type="radio" name="sauce" value="no sauce"> No Sauce
-        </label><br>
+        <label><input type="radio" name="sauce" value="marinara"> Marinara</label><br>
+        <label><input type="radio" name="sauce" value="ranch"> Ranch</label><br>
+        <label><input type="radio" name="sauce" value="no sauce"> No Sauce</label><br>
         <button type="submit">Submit</button>
-</body>
-<body>
+    </form>
+
     <h4>Select Toppings</h4>
     <form action="/submit" method="post">
-        <label>
-            <input type="checkbox" name="toppings" value="pepperoni"> Pepperoni
-        </label><br>
-        <label>
-            <input type="checkbox" name="toppings" value="sausage"> Sausage
-        </label><br>
-        <label>
-            <input type="checkbox" name="toppings" value="mushroom"> Mushroom
-        </label><br>
-        <label>
-            <input type="checkbox" name="toppings" value="pineapple"> Pineapple
-        </label><br>
-        <label>
-            <input type="checkbox" name="toppings" value="peppers"> Peppers
-        </label><br>
-        <label>
-            <input type="checkbox" name="toppings" value="onions"> Onions
-        </label><br>
+        <label><input type="checkbox" name="toppings" value="pepperoni"> Pepperoni</label><br>
+        <label><input type="checkbox" name="toppings" value="sausage"> Sausage</label><br>
+        <label><input type="checkbox" name="toppings" value="mushroom"> Mushroom</label><br>
+        <label><input type="checkbox" name="toppings" value="pineapple"> Pineapple</label><br>
+        <label><input type="checkbox" name="toppings" value="peppers"> Peppers</label><br>
+        <label><input type="checkbox" name="toppings" value="onions"> Onions</label><br>
         <button type="submit">Submit</button>
-</body>
-<body>
-    <h5> Additional Instructions</h5>
+    </form>
+
+    <h5>Additional Instructions</h5>
     <form action="/submit" method="post">
         <textarea name="additional_instructions" rows="4" cols="50" placeholder="Add instructions"></textarea><br>
         <button type="submit">Submit</button>
+    </form>
+
+    <h6>List of My Favorite Games</h6>
+    <table class="favorite-games-table">
+        <tr>
+            <th>Developer</th>
+            <th>Title</th>
+            <th>Year</th>
+        </tr>
+        <tr>
+            <td>Nintendo</td>
+            <td>Animal Crossing</td>
+            <td>2001</td>
+        </tr>
+        <tr>
+            <td>Nintendo</td>
+            <td>Mario Kart 8</td>
+            <td>2014</td>
+        </tr>
+        <tr>
+            <td>Nintendo</td>
+            <td>Nintendo Switch Sports</td>
+            <td>2022</td>
+        </tr>
+    </table>
 </body>
-<h6> List of My Favorite Games</h6>
-<table>
-    <tr>
-        <th>Developer</th>
-        <th>Title</th>
-        <th>Year</th>
-    </tr>
-    <tr>
-        <td>Nintendo</td>
-        <td>Animal Crossings</td>
-        <td>2001</td>
-    </tr>
-    <tr>
-        <td>Nintendo</td>
-        <td>Mario Kart 8</td>
-        <td>2014</td>
-    </tr>
-    <tr>
-        <td>Nintendo</td>
-        <td>Nintendo Switch Sports</td>
-        <td>2022</td>
-    
-</table>
 </html>
