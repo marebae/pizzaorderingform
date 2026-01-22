@@ -28,9 +28,13 @@
 
     <h3>Select Pizza Size</h3>
     <form action="/submit" method="post">
-        <label><input type="radio" name="size" value="medium" required> Medium</label><br>
-        <label><input type="radio" name="size" value="large"> Large</label><br>
-        <label><input type="radio" name="size" value="xlarge"> X-Large</label><br>
+        <label for="size-select">Size</label>
+        <select id="size-select" name="size" required>
+            <option value="" disabled selected>Select size</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+            <option value="xlarge">X-Large</option>
+        </select>
         <button type="submit">Submit</button>
     </form>
 
